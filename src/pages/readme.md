@@ -1,0 +1,1 @@
+## Place to put application page, each page can be consider as a small module
