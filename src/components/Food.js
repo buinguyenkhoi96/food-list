@@ -51,6 +51,11 @@ const Tag = styled.div`
   border-radius: 12px;
   background: #f7f8fa;
   margin-right: 10px;
+  max-width: 109px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
   color: ${({ isNewTag }) => isNewTag ? '#4fc8a6' : 'inherit'};
   font-size: 14px;
 
@@ -104,7 +109,7 @@ const Food = ({ thumbnaillUrl, name, isNew, rating, cookingTime, promotion, clas
             <FontAwesomeIcon icon={faStar} className="food-tag-icon" />
             {rating}
           </Tag>
-          <Tag className="food-tag cooking-time-tag">
+          <Tag className="food-tag cooking-time-tag" title={`${cookingTime} mins`}>
             {`${cookingTime} mins`}
           </Tag>
           {isNew && (
